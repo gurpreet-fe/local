@@ -10,7 +10,7 @@ jobs:
     if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'dev'
     runs-on: ubuntu-latest
     steps:
-      - run: The PR was merged
+      - run: echo "The PR was merged"
 
   build:
     runs-on: ubuntu-latest
