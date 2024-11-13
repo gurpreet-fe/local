@@ -9,7 +9,7 @@ on:
 jobs:
   deploy:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: SSH Remote Commands
@@ -20,4 +20,4 @@ jobs:
           password: ${{ secrets.VPS_KEY }}
           port: ${{ secrets.VPS_PORT }}
           script: |
-            echo "Hello World g"
+            mkdir test1
