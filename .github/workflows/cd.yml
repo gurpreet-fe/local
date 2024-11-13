@@ -20,4 +20,5 @@ jobs:
           password: ${{ secrets.VPS_KEY }}
           port: ${{ secrets.VPS_PORT }}
           script: |
+            whoami
             mkdir test1
