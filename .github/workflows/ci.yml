@@ -1,4 +1,4 @@
-name: Build on Merge to Dev
+name: CI - Build on Merge to Dev
 
 on:
   pull_request:
@@ -9,12 +9,6 @@ jobs:
   if_merged:
     if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'dev'
     runs-on: ubuntu-latest
-    steps:
-      - run: echo "The PR was merged"
-
-  build:
-    runs-on: ubuntu-latest
-
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
