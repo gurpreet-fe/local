@@ -20,4 +20,4 @@ jobs:
           password: ${{ secrets.VPS_KEY }}
           port: ${{ secrets.VPS_PORT }}
           script: |
-            echo "Hello World g"
+            mkdir test1
