@@ -1,13 +1,14 @@
 name: CI - Build on Merge to Dev
 
 on:
-  pull_request:
-    types:
-      - closed
+  push
+  # pull_request:
+  #   types:
+  #     - closed
 
 jobs:
   if_merged:
-    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'dev'
+    # if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'dev'
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
