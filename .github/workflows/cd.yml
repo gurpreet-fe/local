@@ -1,11 +1,10 @@
 name: CD - Deploy to VPS
 
 on:
-  push
-  # workflow_run:
-  #   workflows: ["CI - Build on Merge to Dev"]
-  #   types:
-  #     - completed
+  workflow_run:
+    workflows: ["CI - Build on Merge to Dev"]
+    types:
+      - completed
 
 jobs:
   deploy:
@@ -21,4 +20,4 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           script: |
             whoami
-            mkdir test1
+            mkdir test2
