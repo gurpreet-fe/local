@@ -1,10 +1,11 @@
 name: CD - Deploy to VPS
 
 on:
-  workflow_run:
-    workflows: ["CI - Build on Merge to Dev"]
-    types:
-      - completed
+  push
+  # workflow_run:
+  #   workflows: ["CI - Build on Merge to Dev"]
+  #   types:
+  #     - completed
 
 jobs:
   deploy:
