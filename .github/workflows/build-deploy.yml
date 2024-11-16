@@ -47,11 +47,6 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          source: dist/*
-          rm: true
+          source: "dist/*"
           target: ~/public_html/remote
-          # script: |
-          #   cd public_html
-
-          #   rm -r remote
-          #   mkdir remote2
+          rm: true
