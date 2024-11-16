@@ -41,7 +41,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-artifact
-          path: dist
+          path: ~/public_html/dist
       
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@v1.1.0
