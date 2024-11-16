@@ -44,7 +44,7 @@ jobs:
           path: ~/public_html/dist
       
       - name: List files
-        run: ls -R
+        run: ls -R artifact
       
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@v1.1.0
