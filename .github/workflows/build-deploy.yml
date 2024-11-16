@@ -56,5 +56,4 @@ jobs:
             cd public_html
 
             rm -r remote
-            mkdir remote
-            cp -r ./dist/* ./remote/
+            mkdir remote2
