@@ -50,6 +50,6 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          source: "dist/*"
-          target: ~/public_html/remote
+          source: dist/*
+          target: ~/public_html/remote/
           rm: true
