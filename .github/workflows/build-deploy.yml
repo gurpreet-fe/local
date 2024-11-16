@@ -40,11 +40,8 @@ jobs:
         with:
           name: build-artifact
           path: dist
-
-      - name: List files in dist
-        run: ls -R dist
       
-      - name: SSH Remote Commands
+      - name: Copy to server
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.HOST }}
@@ -53,3 +50,14 @@ jobs:
           source: dist/*
           target: ~/public_html/remote/
           rm: true
+
+      - name: Move up dist content
+        uses: appleboy/ssh-action@latest
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: |
+            cd public_html/remote
+            mv dist/* .
+            rmdir dist
