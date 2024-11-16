@@ -43,6 +43,9 @@ jobs:
           name: build-artifact
           path: ~/public_html/dist
       
+      - name: List files
+        run: ls
+      
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@v1.1.0
         with:
