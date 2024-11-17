@@ -48,7 +48,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           source: dist/*
-          target: ~/public_html/remote/
+          target: /var/www/remote
           rm: true
 
       - name: Move up dist content
@@ -58,6 +58,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            cd public_html/remote
+            cd /var/www/remote
             mv dist/* .
             rmdir dist
