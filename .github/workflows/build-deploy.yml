@@ -7,7 +7,7 @@ on:
 jobs:
   build-vite:
     if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'dev'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -30,7 +30,7 @@ jobs:
           path: dist
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu
     needs: build-vite
 
     steps:
