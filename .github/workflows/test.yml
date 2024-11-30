@@ -1,0 +1,15 @@
+name: Test
+on:
+  Push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test script
+        uses: appleboy/ssh-action@v1.1.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script_path: ${{ secrets.SCRIPT_PATH }}
