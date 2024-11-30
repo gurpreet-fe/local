@@ -13,3 +13,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script_path: ${{ secrets.SCRIPT_PATH }}
+          script: |
+            echo ${{ secrets.SCRIPT_PATH }}
